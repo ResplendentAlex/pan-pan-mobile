@@ -1,16 +1,16 @@
-# pan_pan_mobile
+# <p align="center"><img src="assets/logo/icon_horizontal.png" style="width: 350px; margin-bottom: -25px" alt="Pan Pan Little Shop"></p>
 
-A new Flutter project.
+This is a mobiel application to do trading, specifically for art and crafts. It is made as project for one of my college modules, PBP (Programming Berbasis Platform).
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+# 📃 **LICENSE**<br>
+This project is licensed under the MIT License - refer to the LICENSE file for more details.
 
-A few resources to get you started if this is your first Flutter project:
+<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# 📝 **ASSIGNMENT**<br>
+**Name** : Alexander William Lim <br>
+**NPM** : 2306207505 <br>
+**Class** : PBP F
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
