@@ -55,6 +55,7 @@ Pada Tugas 7 ini, ada beberapa *widget* yang digunakan, baik itu yang dibuat sen
 | Row | widget yang menyusung widget anaknya secara horizontal. | 
 | SizedBox | Widget yang memberikan ukuran tetap atau ruang kosong di anatar widget. |
 | GridView | Widget yang menampilkan widget anaknya dalam tata letak grid. |
+| Card | Widget yang digunakan untuk membuat desain material kartu. |
 
 ### Fungsi `setState()`
 Sebuah metode yang digunakan dalam `StatefulWidget` untuk memberi tahu Flutter bahwa ada perbubahan pada state sehingga memerlukan pembaruan tampilan.
