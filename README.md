@@ -14,6 +14,94 @@ This project is licensed under the MIT License - refer to the LICENSE file for m
 **NPM** : 2306207505 <br>
 **Class** : PBP F
 
+## **TUGAS ***<br>
+### Kegunaan `const` pada Flutter
+`const` adalah sebuah keyword yang digunakan untuk mendeklarasikan variabel atau objek yang bersifat konstan dan tidak diubah setelah diinisalisasi. Nilai pada variabel `const` sudah seharusnya diketahui pada saat kompilasi.
+
+`const` biasanya digunakan pada variabel yang sudah diketauhi nilainya pada saat kompilasi atau pada *widget* yang kita tahu tidak akan berubah selama siklus hidup aplikasi (*Stateless widget*). 
+
+Sementara itu, `const` sebaiknya tidak digunakan bila nilai variabel perlu di proses setelah kompilasi atau dapat berubah selama runtime. Selain itu, keyword `const` juga sebaiknya tidak digunakan pada *Stateful widgets* karena dapat berubah selama siklus hidup aplikasi. Kita dapat menggunakan `final` atau variabel biasa yang akan lebih cocok pada kasus seperti ini.
+
+### Layout `Column` dan `Row` pada Flutter
+1. `Column`
+Widget yang menyusun widget anakanya secara vertikal (dari atas ke bawah). Widget ini biasanya digunakan saat kita ingin menempatkan widget anak dalam satu kolom.
+
+Contoh:
+```dart
+Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+        Text(
+            content,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+            ),
+        ),
+    ],
+),
+```
+
+2. `Row`
+Widget yang menyusun widget anakanya secaral horizontal (dari kiri ke kanan). Widget ini biasanya digunakan saat kita ingin menempatkan widget anak dalam satu baris.
+
+Contoh:
+```dart
+Row(
+    children: [
+        const Expanded(
+            // Menampilkan Profile Picture.
+            flex: 1,
+            child: ProfilePicture(
+                imageUrl:
+                    "https://i.pinimg.com/originals/24/fc/95/24fc9501386692e88bd26bf68fe0e3cb.jpg"),
+        ),
+        // Column untuk menampilkan teks sambutan.
+        Expanded(
+            flex: 2,
+            child: Column(
+                children: [
+                    // Menampilkan Welcome Text dengan nama pengguna.
+                    const Text(
+                        'Welcome back,',
+                        style: TextStyle(fontSize: 16.0),
+                        textAlign: TextAlign.center,
+                    ),
+                    TextCard(content: name),
+                ],
+            ),
+        ),
+    ],
+),
+```
+
+### Elemen input pada *form* tugas
+Ada dua elemen input yang digunakan pada *form* yang diimplementasikan pada tugas, `TextFormField` dan `ElevatedButton`. 
+
+`TextFormField` digunakan untuk menerima input bebas dari pengguna yang dapat divalidasi tipenya. Ini akan memberikan user kemudahan dalam menambahkan detail-detail dari produk.
+
+`ElevatedButton` digunakan untuk menyimpan data-data yang sudah di input pada *form*. Saat button ditekan, sebuah fungsi akan dipanggil dan tampilan detail produk akan diperlihatkan.
+
+Sementara itu, tentunya ada elemen lain yang tidak digunakan pada tugas kali ini, diantara lain adalah `DropdownButton`, `Checkbox`, `Radio`, `Switch`, dan masih banyak lagi. Elemen-elemen input tersebut tidak digunakan karena kurang cocok pada tipe input yang di ekspektasikan oleh pengguna.
+
+### Konsistensi tema pada aplikasi
+Ada beberapa cara yang dapat digunakan untuk menjaga konsitensi aplikasi ada ada dua metode yang telah dilakukan pada tugas ini:
+
+1. Mendefinisikan warna-warna yang akan digunakan pada tugas pada berkas `main.dart`. Pada *widget-widget* yang digunakan, hanya warna-warna yang telah dipilih akan digunakan. Kalaupun ada warna yang ingin digunakan akan dipilih warna yang sesuai dengan warna primer.
+
+2. Membagi *widget-widget* menjadi bagian-bagian pada berkas tersendiri. Ini akan membuat komponen-komponen yang digunakan untuk membangun aplikasi lebih modular dan mudah untuk disesuaikan dengan tema. Jika ada warna atau bentuk *widget* UI yang tidak sesuai dengan tema, maka yang akan terpengaruh hanyalah komponen tersebut.
+
+### Navigasi pada aplikasi Flutter yang memiliki banyak halaman
+Ada dua cara yang dapat digunakan untuk melakukan navigasi pada aplikasi yang dikembangkan menggunakan framework Flutter:
+
+1. Menggunakan *drawer*
+*Drawer* merupakan sebuah komponen UI yang digunakan untuk melakukan navigasi menuju halam lain. Fungsi *drawer* mirip dengan *navbar* pada pengembangan web dimana ada teks-teks pada sebuah komponen atau element tersebut yang dapat ditekan untuk mengarahkan pengguna kepada halaman yang ingin di lihat. Nantinya, objek teratas pada Stack akan ditukar (dengan fungsi `pushReplacement()`) dengan objek atau halaman yang ingin ditampilkan sehingga yang ditampilkan sekarang adalah yang diekpektasikan oleh pengguna.
+
+2. Menggunakan elemen UI secara langsung
+Adapun metode dimana kita dapat langsung membuat sebuah elemen UI dan menghubungkannya pada sebuah URL pada halaman kita. Elemen UI tersebut akan memanggil fungsi `push()` pada Stack halaman sehingga objek atau halaman yang pada index teratas Stack merupakan halaman yang ingin dilihat oleh pengguna.
+
 ## **TUGAS 7**<br>
 ### *Stateless widget* dan *Stateful widget*
 ***Stateless Widget***
