@@ -19,8 +19,18 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(
-            child: Text('Add a New Product'),
+          title: const Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                'Add a New Product',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold, 
+                ),
+              ),
+            ]
           ),
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Colors.white,
