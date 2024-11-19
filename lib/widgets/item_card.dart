@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pan_pan_mobile/screens/product_entry_form.dart';
+import 'package:pan_pan_mobile/screens/list_productentry.dart';
 
 class ProductHomepage {
   final String name;
@@ -43,6 +44,14 @@ class ProductCard extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => const ProductEntryFormPage(),
+              ),
+            );
+          } else if (item.name == "Lihat Daftar Produk") {
+            // Navigate ke route Lihat Daftar Produk
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProductEntryPage(),
               ),
             );
           }
