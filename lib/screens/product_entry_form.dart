@@ -161,7 +161,7 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
                         // Kirim ke Django dan tunggu respons
                         final response = await request.postJson(
                           "http://127.0.0.1:8000/create-flutter/",
-                          jsonEncode(<String, String>{
+                          jsonEncode(<String, String>{  
                             'name': _productName,
                             'description': _productDescription,
                             'price': _productPrice.toString(),
